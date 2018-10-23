@@ -10,6 +10,116 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, two-columns, left-sidebar, accessibility-ready, pizzeria 
 Text Domain: lapizzeria
 */
-body{
-	background-color: red;
+html {
+	box-sizing: border-box;
 }
+
+*, *.before, *.after {
+	box-sizing: inherit;
+}
+
+.container {
+	max-width: 1100px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+/** ENCABEZADO **/
+header.header-site {
+	border-bottom: 1px solid #c1c1c1;
+}
+
+div.logo {
+	text-align: center;
+}
+
+img.logotipo {
+	width: 250px;
+}
+
+div.redes-sociales {
+	
+}
+
+@media only screen and (min-width: 768px){
+	div.logo {
+		text-align: left;
+	}
+}
+
+@media only screen and (min-width: 992px){
+	div.logo {
+		text-align: center;
+	}
+}
+
+@media only screen and (min-width: 768px){
+	.header-site .container {
+		position: relative;
+	}
+
+	.informacion-encabezado {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+
+	div.direccion p {
+		text-align: right;
+	}
+}
+
+/** MENU DE REDES SOCIALES **/
+nav.sociales {
+	min-height: 50px;
+}
+nav.sociales ul {
+	text-align: center;
+	list-style: none;
+	padding: 0;
+}
+
+@media only screen and (min-width: 768px) {
+	nav.sociales ul {
+		float: right;
+	}
+}
+
+
+nav.sociales ul li {
+	position: relative;
+	display: inline-block;
+}
+
+nav.sociales ul li a::before{
+	display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	
+}
+
+.sr-text {
+	display: none;
+}
+
+.social-icon::before {
+    margin-right: 10px;
+	font-family: "Font Awesome 5 Brands";
+	color: #000000;
+}
+
+nav.sociales li a[href*="facebook.com"]::before {
+	margin-right: 10px;
+	content: '\f39e';
+}
+nav.sociales li a[href*="twitter.com"]::before {
+	margin-right: 10px;
+	content: '\f099';
+}
+nav.sociales li a[href*="instagram.com"]::before {
+	margin-right: 10px;
+	content: '\f16d';
+}
+
