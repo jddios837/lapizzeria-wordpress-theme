@@ -8,7 +8,7 @@
 		<title>Document</title>
 	</head>
 	<body>
-		<div class="header-site">
+		<header class="header-site">
 			<div class="container">
 				<div class="logo">
 					<!-- esc_url sanitizar la url -->
@@ -41,19 +41,29 @@
 					</div><!-- .direccion -->
 				</div>
 
-				<nav class="menu-sitio">
-					<div class="contenedor navegacion">
-						<?php 
-							$args = array(
-								'theme_location' => 'header-menu',
-								'container' => 'nav',
-								'container_class' => 'menu-sitio'
-							);
-							wp_nav_menu($args);
-						?>
-					</div>
-				</nav>
+				
+			</div>
+		</header>
+		
+		<div class="menu-principal">
+			<div class="mobile-menu">
+				<a href="#" class="mobile">
+					<i class="fas fa-bars"></i>
+					Menu
+				</a>
+			</div>
+			<div class="contenedor navegacion">
+				<?php 
+					$args = array(
+						'theme_location' => 'header-menu',
+						'container' => 'nav',
+						'container_class' => 'menu-sitio'
+					);
+					wp_nav_menu($args);
+				?>
 			</div>
 		</div>
+		
+
 
 		
