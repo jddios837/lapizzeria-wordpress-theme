@@ -18,6 +18,10 @@ html {
 	box-sizing: inherit;
 }
 
+.texto-centrado {
+	text-align: center;
+}
+
 .container {
 	max-width: 1100px;
 	width: 100%;
@@ -36,10 +40,6 @@ div.logo {
 
 img.logotipo {
 	width: 250px;
-}
-
-div.redes-sociales {
-	
 }
 
 @media only screen and (min-width: 768px){
@@ -199,4 +199,24 @@ nav.menu-sitio ul li a:hover {
 	.mobile-menu a {
 		display: none;
 	}
+}
+
+
+/** Templates contenido **/
+
+div.principal {
+	padding: 60px;
+	background-color: #ffffff;
+	position: relative;
+}
+
+@media only screen and (min-width: 768px){
+	div.principal {
+		margin-top:  -90px;
+	}
+}
+
+.contenido-paginas p {
+	font-size: 18px;
+	line-height: 50px;
 }
